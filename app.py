@@ -69,5 +69,5 @@ with st.spinner('🚦 Hang tight! The heatmap is navigating through the traffic 
 
 column1, column2 = st.columns(2)
 
-column1.markdown('[![LinkedIn](https://content.linkedin.com/content/dam/me/brand/en-us/brand-home/logos/01-dsk-e5-v2.png.original.png)](https://www.linkedin.com/in/joeant719/)')
+column1.markdown('[![LinkedIn](https://img.icons8.com/?size=1x&id=67570&format=png)](https://www.linkedin.com/in/joeant719/)')
 column2.markdown('[![GitHub](https://img.icons8.com/?size=1x&id=sbhfmWq4KRr1&format=png)](https://github.com/joeanton719)')
