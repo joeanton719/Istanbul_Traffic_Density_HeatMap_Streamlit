@@ -67,8 +67,5 @@ with st.spinner('🚦 Hang tight! The heatmap is navigating through the traffic 
 
         folium_static(map, width=1200, height=500)
 
-columns = st.sidebar.columns(1)
-
-with columns[1]:
-    st.write("""<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="joeant719" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://tr.linkedin.com/in/joeant719?trk=profile-badge">Joseph Antony</a></div>""", unsafe_allow_html=True)
+st.write("""<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="joeant719" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://tr.linkedin.com/in/joeant719?trk=profile-badge">Joseph Antony</a></div>""", unsafe_allow_html=True)
     
