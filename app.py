@@ -67,5 +67,7 @@ with st.spinner('🚦 Hang tight! The heatmap is navigating through the traffic 
 
         folium_static(map, width=1200, height=500)
 
-st.write("""<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="joeant719" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://tr.linkedin.com/in/joeant719?trk=profile-badge">Joseph Antony</a></div>""", unsafe_allow_html=True)
-    
+column1, column2 = st.columns(2)
+
+column1.markdown('[![LinkedIn](https://content.linkedin.com/content/dam/me/brand/en-us/brand-home/logos/01-dsk-e5-v2.png.original.png)](https://www.linkedin.com/in/joeant719/)')
+column1.markdown('[![GitHub](https://img.icons8.com/?size=1x&id=sbhfmWq4KRr1&format=png)](https://github.com/joeanton719)')
