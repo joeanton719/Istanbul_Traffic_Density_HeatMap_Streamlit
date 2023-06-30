@@ -67,7 +67,7 @@ with st.spinner('🚦 Hang tight! The heatmap is navigating through the traffic 
 
         folium_static(map, width=1200, height=500)
 
-column1, column2 = st.columns(2)
+columns = st.columns(6)
 
-column1.markdown('[![LinkedIn](https://img.icons8.com/?size=1x&id=67570&format=png)](https://www.linkedin.com/in/joeant719/)')
-column2.markdown('[![GitHub](https://img.icons8.com/?size=1x&id=sbhfmWq4KRr1&format=png)](https://github.com/joeanton719)')
+columns[0].markdown('[![LinkedIn](https://img.icons8.com/?size=1x&id=67570&format=png)](https://www.linkedin.com/in/joeant719/)')
+columns[1].markdown('[![GitHub](https://img.icons8.com/?size=1x&id=sbhfmWq4KRr1&format=png)](https://github.com/joeanton719)')
