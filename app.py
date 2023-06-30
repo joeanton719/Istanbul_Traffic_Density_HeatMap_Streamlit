@@ -35,22 +35,25 @@ def load_json():
 
 data=load_json()
 
-#Title
-st.title('Daily Traffic Density in Istanbul')
-
-st.text("With this heat map, you can see the average daily traffic density in all parts of Istanbul between January 2020 and April 2023. \n"\
-        "The busiest points and important traffic corridors can be observed through this map.")
-
-st.text("Ocak 2020 ve Nisan 2023 tarihleri arasında İstanbul'un her yerindeki günlük ortalama trafik yoğunluğunu bu ısı haritası ile "\
-        "görebilirsiniz. \nEn yoğun noktalar ve önemli trafik koridorları bu harita aracılığıyla gözlemlenebilir.")
-
 # Display the map using folium_static
-with st.spinner('Wait for it...'):
-# Create a Folium map object
-    map = folium.Map(location=[gh_td['LATITUDE'].mean(), gh_td['LONGITUDE'].mean()], zoom_start=10)
+with st.spinner('🚦 Hang tight! The heatmap is navigating through the traffic jam of data, almost there!\n'\
+                '🚦 Beklemede kal! Isı haritası, veri trafiğinde ilerliyor, neredeyse tamamlandı!'):
 
-    # Add the HeatMapWithTime layer to the map
-    hm = plugins.HeatMapWithTime(data, 
+        #Title
+        st.title('Daily Traffic Density in Istanbul')
+
+        st.text("With this heat map, you can see the average daily traffic density in all parts of Istanbul between January 2020 and April 2023. \n"\
+                "The busiest points and important traffic corridors can be observed through this map.")
+
+        st.text("Ocak 2020 ve Nisan 2023 tarihleri arasında İstanbul'un her yerindeki günlük ortalama trafik yoğunluğunu bu ısı haritası ile "\
+                "görebilirsiniz. \nEn yoğun noktalar ve önemli trafik koridorları bu harita aracılığıyla gözlemlenebilir.")
+
+
+# Create a Folium map object
+        map = folium.Map(location=[gh_td['LATITUDE'].mean(), gh_td['LONGITUDE'].mean()], zoom_start=10)
+
+        # Add the HeatMapWithTime layer to the map
+        hm = plugins.HeatMapWithTime(data, 
                                 auto_play=True,
                                 index=list(gh_td['DATE_TIME'].unique()),
                                 min_opacity=0.05, 
@@ -59,7 +62,7 @@ with st.spinner('Wait for it...'):
                                 max_speed=10,
                                 speed_step=0.5)
 
-    hm.add_to(map)
+        hm.add_to(map)
 
 
-    folium_static(map, width=1200, height=500)
+        folium_static(map, width=1200, height=500)
